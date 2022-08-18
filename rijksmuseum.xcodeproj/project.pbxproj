@@ -11,6 +11,7 @@
 		DA746FCF28AE40BC00DD7E77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA746FCE28AE40BC00DD7E77 /* SceneDelegate.swift */; };
 		DA746FD628AE40BE00DD7E77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA746FD528AE40BE00DD7E77 /* Assets.xcassets */; };
 		DA746FD928AE40BE00DD7E77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA746FD728AE40BE00DD7E77 /* LaunchScreen.storyboard */; };
+		DAB1836828AE448B00A86E3E /* Application in Frameworks */ = {isa = PBXBuildFile; productRef = DAB1836728AE448B00A86E3E /* Application */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		DA746FD828AE40BE00DD7E77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA746FDA28AE40BE00DD7E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAB1836428AE439800A86E3E /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		DAB1836528AE447900A86E3E /* Application */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Application; path = Packages/Application; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB1836828AE448B00A86E3E /* Application in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,8 +40,10 @@
 		DA746FC028AE40BC00DD7E77 = {
 			isa = PBXGroup;
 			children = (
+				DAB1836528AE447900A86E3E /* Application */,
 				DA746FCB28AE40BC00DD7E77 /* rijksmuseum */,
 				DA746FCA28AE40BC00DD7E77 /* Products */,
+				DAB1836628AE448B00A86E3E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +75,13 @@
 			name = Application;
 			sourceTree = "<group>";
 		};
+		DAB1836628AE448B00A86E3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,6 +98,9 @@
 			dependencies = (
 			);
 			name = rijksmuseum;
+			packageProductDependencies = (
+				DAB1836728AE448B00A86E3E /* Application */,
+			);
 			productName = rijksmuseum;
 			productReference = DA746FC928AE40BC00DD7E77 /* rijksmuseum.app */;
 			productType = "com.apple.product-type.application";
@@ -355,6 +370,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DAB1836728AE448B00A86E3E /* Application */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Application;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DA746FC128AE40BC00DD7E77 /* Project object */;
 }
