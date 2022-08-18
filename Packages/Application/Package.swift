@@ -14,11 +14,16 @@ let package = Package(
             targets: ["Application"]
         )
     ],
-    dependencies: [],
+    dependencies: [
+        .package(
+            name: "LocalizationKit",
+            path: "../LocalizationKit"
+        )
+    ],
     targets: [
         .target(
             name: "Application",
-            dependencies: []
+            dependencies: ["LocalizationKit"]
         ),
         .testTarget(
             name: "ApplicationTests",
