@@ -58,6 +58,16 @@ final class NetworkRequestFactory {
         self.language = language
         self.apiKey = apiKey
     }
+
+    /// Creates a builder to construct a request to receve a list of collections.
+    /// - Returns: An instance of request builder.
+    func makeCollection() -> CollectionRequest.Builder {
+        .init(
+            url: prepareUrl(api: .collection),
+            method: .get,
+            queryItems: [ConstantQueryKey.apiKey: apiKey]
+        )
+    }
 }
 
 private extension NetworkRequestFactory {

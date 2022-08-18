@@ -46,7 +46,16 @@ final public class CoordinatorImpl: Coordinator {
     public func start(route: AppRoute) {
         switch route {
         case .collections:
-            break
+            let builder = CollectionListBuilder(
+                networkSession: networkSession,
+                networkRequestFactory: networkRequestFactory,
+                coordinator: self
+            )
+            let viewController = builder.build()
+            navigationController.pushViewController(
+                viewController,
+                animated: true
+            )
         case .collectionDetails(let objectNumber):
             break
         }
