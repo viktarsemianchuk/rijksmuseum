@@ -23,6 +23,7 @@
 		DA746FDA28AE40BE00DD7E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAB1836428AE439800A86E3E /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		DAB1836528AE447900A86E3E /* Application */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Application; path = Packages/Application; sourceTree = "<group>"; };
+		DAB1836928AE44F200A86E3E /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +41,7 @@
 		DA746FC028AE40BC00DD7E77 = {
 			isa = PBXGroup;
 			children = (
+				DAB1836928AE44F200A86E3E /* TestPlan.xctestplan */,
 				DAB1836528AE447900A86E3E /* Application */,
 				DA746FCB28AE40BC00DD7E77 /* rijksmuseum */,
 				DA746FCA28AE40BC00DD7E77 /* Products */,
