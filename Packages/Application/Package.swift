@@ -18,12 +18,16 @@ let package = Package(
         .package(
             name: "LocalizationKit",
             path: "../LocalizationKit"
+        ),
+        .package(
+            name: "ServiceKit",
+            path: "../ServiceKit"
         )
     ],
     targets: [
         .target(
             name: "Application",
-            dependencies: ["LocalizationKit"]
+            dependencies: ["LocalizationKit", "ServiceKit"]
         ),
         .testTarget(
             name: "ApplicationTests",
