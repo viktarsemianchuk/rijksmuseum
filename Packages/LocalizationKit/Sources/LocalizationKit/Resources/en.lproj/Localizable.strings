@@ -1,0 +1,12 @@
+"Collections" = "Collections";
+"Details" = "Details";
+"ArtObjects" = "Art Objects";
+"ItemsCount" = "Count: %@";
+"Author" = "Author";
+"Dimensions" = "Dimensions";
+"Description" = "Description";
+"Name" = "Name";
+"Sorry" = "Sorry...";
+"GenericLoadErrorDescription" = "Something technical went wrong. Please, try again later.";
+"ServerError" = "Server error";
+"TryAgain" = "Try again";

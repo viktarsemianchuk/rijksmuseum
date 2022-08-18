@@ -91,6 +91,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA746FDD28AE40BE00DD7E77 /* Build configuration list for PBXNativeTarget "rijksmuseum" */;
 			buildPhases = (
+				DAB1836A28AE491E00A86E3E /* SwiftGen */,
 				DA746FC528AE40BC00DD7E77 /* Sources */,
 				DA746FC628AE40BC00DD7E77 /* Frameworks */,
 				DA746FC728AE40BC00DD7E77 /* Resources */,
@@ -152,6 +153,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DAB1836A28AE491E00A86E3E /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PROJECT_DIR}/Tools/swiftgen/bin/swiftgen\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA746FC528AE40BC00DD7E77 /* Sources */ = {
