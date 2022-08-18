@@ -22,12 +22,20 @@ let package = Package(
         .package(
             name: "ServiceKit",
             path: "../ServiceKit"
+        ),
+        .package(
+            name: "InterfaceKit",
+            path: "../InterfaceKit"
         )
     ],
     targets: [
         .target(
             name: "Application",
-            dependencies: ["LocalizationKit", "ServiceKit"]
+            dependencies: [
+                "LocalizationKit",
+                "ServiceKit",
+                "InterfaceKit"
+            ]
         ),
         .testTarget(
             name: "ApplicationTests",
