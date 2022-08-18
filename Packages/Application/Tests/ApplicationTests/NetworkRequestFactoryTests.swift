@@ -251,3 +251,74 @@ extension NetworkRequestFactoryTests {
         XCTAssertNotNil(request.urlRequest)
     }
 }
+
+// MARK: - Collection details request
+
+extension NetworkRequestFactoryTests {
+
+    func testCollectionDetailsRequestEnglish() {
+        let url = Constants.validUrl
+        let language = NetworkRequestFactory.RequestLanguage.english
+        let apiKey = "fjsdf#$353"
+        let endPoint = NetworkRequestFactory.RequestAPI.collection
+        let objectNumber = "123"
+
+        setupFactory(url: url, language: language, apiKey: apiKey)
+        let request = requestFactory.makeCollectionDetails(
+            objectNumber: objectNumber
+        )
+
+        let expectedUrl =
+        url + language.rawValue + endPoint.rawValue + "/\(objectNumber)"
+        let expectedQueryItems = ["key": apiKey]
+
+        XCTAssertEqual(request.url, expectedUrl)
+        XCTAssertEqual(request.queryItems, expectedQueryItems)
+        XCTAssertEqual(request.method, .get)
+        XCTAssertNotNil(request.urlRequest)
+    }
+
+    func testCollectionDetailsRequestDutch() {
+        let url = Constants.validUrl
+        let language = NetworkRequestFactory.RequestLanguage.dutch
+        let apiKey = "kmefk435435jfo335"
+        let endPoint = NetworkRequestFactory.RequestAPI.collection
+        let objectNumber = "dgekgerkgerg35kgo435"
+
+        setupFactory(url: url, language: language, apiKey: apiKey)
+        let request = requestFactory.makeCollectionDetails(
+            objectNumber: objectNumber
+        )
+
+        let expectedUrl =
+        url + language.rawValue + endPoint.rawValue + "/\(objectNumber)"
+        let expectedQueryItems = ["key": apiKey]
+
+        XCTAssertEqual(request.url, expectedUrl)
+        XCTAssertEqual(request.queryItems, expectedQueryItems)
+        XCTAssertEqual(request.method, .get)
+        XCTAssertNotNil(request.urlRequest)
+    }
+
+    func testCollectionDetailsRequestInvalidURL() {
+        let url = Constants.invalidUrl
+        let language = NetworkRequestFactory.RequestLanguage.dutch
+        let apiKey = "1243u3ndfjhu4t85"
+        let endPoint = NetworkRequestFactory.RequestAPI.collection
+        let objectNumber = "fk(enjgrelk883jkfd243&9fe"
+
+        setupFactory(url: url, language: language, apiKey: apiKey)
+        let request = requestFactory.makeCollectionDetails(
+            objectNumber: objectNumber
+        )
+
+        let expectedUrl =
+        url + language.rawValue + endPoint.rawValue + "/\(objectNumber)"
+        let expectedQueryItems = ["key": apiKey]
+
+        XCTAssertEqual(request.url, expectedUrl)
+        XCTAssertEqual(request.queryItems, expectedQueryItems)
+        XCTAssertEqual(request.method, .get)
+        XCTAssertNil(request.urlRequest)
+    }
+}

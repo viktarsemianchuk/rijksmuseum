@@ -68,6 +68,18 @@ final class NetworkRequestFactory {
             queryItems: [ConstantQueryKey.apiKey: apiKey]
         )
     }
+
+    /// Creates a request to get details for an appropriate collection.
+    /// - Parameters:
+    ///   - objectNumber: number of an appropriate collection.
+    /// - Returns: An instance of request.
+    func makeCollectionDetails(objectNumber: String) -> CollectionDetailsRequest {
+        .init(
+            url: prepareUrl(api: .collection) + "/\(objectNumber)",
+            method: .get,
+            queryItems: [ConstantQueryKey.apiKey: apiKey]
+        )
+    }
 }
 
 private extension NetworkRequestFactory {
