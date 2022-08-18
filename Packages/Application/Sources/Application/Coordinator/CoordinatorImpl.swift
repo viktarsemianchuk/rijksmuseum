@@ -57,7 +57,15 @@ final public class CoordinatorImpl: Coordinator {
                 animated: true
             )
         case .collectionDetails(let objectNumber):
-            break
+            let builder = CollectionDetailsBuilder(
+                objectNumber: objectNumber,
+                networkSession: networkSession,
+                networkRequestFactory: networkRequestFactory
+            )
+            let viewController = builder.build()
+            navigationController.pushViewController(
+                viewController, animated: true
+            )
         }
     }
 }
