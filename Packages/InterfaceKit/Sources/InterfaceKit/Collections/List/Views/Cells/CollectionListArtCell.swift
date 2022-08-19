@@ -84,7 +84,17 @@ extension CollectionListArtCell {
             )
             imageViewHeightConstraint?.isActive = true
 
-            photoImageView.kf.setImage(with: URL(string: image.url))
+            let scale = (bounds.width * UIScreen.main.scale) / image.width
+            let resizingProcessor = ResizingImageProcessor(
+                referenceSize: .init(
+                    width: image.width * scale,
+                    height: image.height * scale
+                ), mode: .aspectFit
+            )
+            photoImageView.kf.setImage(
+                with: URL(string: image.url),
+                options: [.processor(resizingProcessor)]
+            )
         }
     }
 }
