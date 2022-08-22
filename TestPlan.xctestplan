@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "0AE63FA2-7365-4B92-8C2A-031B43364AB8",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/Application",
+        "identifier" : "ApplicationTests",
+        "name" : "ApplicationTests"
+      }
+    }
+  ],
+  "version" : 1
+}
